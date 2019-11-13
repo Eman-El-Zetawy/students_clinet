@@ -16,7 +16,7 @@ h1{
 
 }
 .input-page{
-    width: 40px;
+    width: 170px;
     height: 40px;
     background: rgb(212, 204, 204);
     outline: none;
@@ -24,7 +24,6 @@ h1{
     color: #000;
     margin: 20px ;
     padding: 10px;
-    border-radius: 50%;
 }
 .button{
   color: #000;  
@@ -46,7 +45,7 @@ th{
     border: black solid 2px ;
 }
 .error{
-    width: 240px;
+    width: 200px;
     color: red;
     padding: 20px;
     font-size: 20px ;

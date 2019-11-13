@@ -1,25 +1,27 @@
 var tabal =document.getElementById("tabal");
+var idid =document.getElementById("id");
 var firstName =document.getElementById("first_name");
 var lastName =document.getElementById("last_name");
 var grade =document.getElementById("grade");
 var button =document.getElementById("button");
 var errorMassage =document.getElementById("error");
 
-var  array =[] , s=['id', 'first_name' ,'last_name' ,'grade'] ;
+var  array =[] ;
 button.addEventListener("click" , function(){
+  id = idid.value ;
 fn = firstName.value ;
 ln = lastName.value;
 g =grade.value ;
 console.log(fn , ln , g );
  const my = new Headers();
 my.append('Content-Type', 'application/json');
- fetch('http://localhost:5000/arr',{
-        method:'POST',
+ fetch('http://localhost:300/arr/'+ id,{
+        method:'PUT',
         headers : my , 
         body:JSON.stringify({
            first_name :fn ,
             last_name :ln,
-              gender :g
+              grade :g
         })
     })
     .then( response=>response.json())
